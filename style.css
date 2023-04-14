@@ -13,3 +13,38 @@ body {
   border: 1px solid grey;
   min-height: 50px;
 }
+.container{
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 
+  "header header header"
+  "sidebar content content"
+  "sidebar content content"
+  "footer footer footer"
+  ;
+  gap: 10px;
+  grid-template-rows: 50px 1fr 50px;
+
+}
+.item-1{
+  grid-area: header;
+  height: 50px;
+}
+.item-2{
+  grid-area: sidebar;
+}
+.item-3{
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  padding: 20px;
+
+}
+.item-3 > div{
+  background-color: blue;
+}
+.item-4{
+  grid-area: footer;
+  height: 50px;
+}
